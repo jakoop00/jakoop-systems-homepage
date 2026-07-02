@@ -323,17 +323,75 @@
                 loader.classList.add('hidden');
             }
         });
-    </script>
-<!-- زر واتساب ثابت Jakoop Tech -->
-<a href="https://wa.me/962775121442?text=مرحباً%20Jakoop%20Tech%20👋%0A%0Aشفت%20موقعكم%20وحابب%20أستفسر%20عن%20الخدمات." 
+    </script><!-- زر واتساب فخم Jakoop Tech -->
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+    transition: all 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    background: #128C7E;
+    transform: scale(1.15) rotate(10deg);
+    animation: none;
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+  
+  .whatsapp-tooltip {
+    position: fixed;
+    bottom: 45px;
+    right: 105px;
+    background: #333;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .whatsapp-float:hover + .whatsapp-tooltip {
+    opacity: 1;
+  }
+</style>
+
+<a href="https://wa.me/962775121442?text=مرحباً%20Jakoop%20Tech%20👋%0A%0Aشفت%20موقعكم%20وحابب%20أستفسر%20عن%20خدماتكم%20الرقمية." 
+   class="whatsapp-float" 
    target="_blank"
-   style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease; text-decoration: none;"
-   onmouseover="this.style.transform='scale(1.1)'; this.style.background='#20BA5A';"
-   onmouseout="this.style.transform='scale(1)'; this.style.background='#25D366';">
-   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-     <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.52 14.25c-.19.53-1.09.98-1.51 1.04-.38.05-.86.07-1.39-.08-.32-.09-.74-.25-1.28-.49-2.25-.98-3.72-3.27-3.83-3.42-.11-.15-.91-1.21-.91-2.31s.58-1.64.79-1.86c.21-.23.46-.28.61-.28.15 0 .3 0 .43.01.14.01.33-.05.51.39.19.44.63 1.54.69 1.65.05.11.09.25.02.4-.07.15-.11.25-.21.38-.1.13-.22.29-.32.39-.1.1-.2.21-.09.41.11.2.49.81 1.05 1.31.72.64 1.33.84 1.53.95.2.11.32.09.44-.05.12-.15.51-.59.64-.79.14-.2.27-.17.46-.1.19.07 1.21.57 1.42.67.21.11.35.16.4.25.05.09.05.51-.14 1.04z"/>
+   aria-label="تواصل واتساب">
+   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" fill="white">
+     <path d="M16.04 2.006c-7.73 0-14 6.27-14 14 0 2.47.65 4.89 1.89 7.02L2 30l7.13-1.87c2.04 1.11 4.35 1.7 6.71 1.7 7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.5c-2.12 0-4.2-.56-6.02-1.62l-.43-.25-4.23 1.11 1.13-4.12-.28-.42c-1.17-1.87-1.79-4.03-1.79-6.2 0-6.43 5.23-11.66 11.66-11.66 6.43 0 11.66 5.23 11.66 11.66s-5.23 11.66-11.66 11.66zm6.4-8.78c-.35-.18-2.08-1.03-2.4-1.14-.32-.12-.55-.18-.78.18-.23.35-.9 1.14-1.1 1.38-.2.23-.4.26-.75.09-.35-.18-1.47-.54-2.8-1.72-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6-.2-.01-.43-.01-.66-.01s-.6.09-.91.43c-.31.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.18.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.08-.85 2.37-1.67.29-.82.29-1.52.2-1.67-.08-.15-.32-.23-.67-.4z"/>
    </svg>
 </a>
-<!-- نهاية زر الواتساب -->
+<div class="whatsapp-tooltip">احكي معنا واتساب</div>
+<!-- نهاية زر الواتساب الفخم -->
 </body>
 </html>
