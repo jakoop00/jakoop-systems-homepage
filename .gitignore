@@ -1,39 +1,85 @@
-# .gitignore - Jakoop Tech
-# أي ملف/مجلد مكتوب هون ما بنرفع على GitHub
+# .gitignore - Jakoop Tech Production
+# أي شي هون GitHub رح يتجاهله وما يرفعه
 
-# ملفات النظام
+# ===== ملفات النظام =====
 .DS_Store
+.DS_Store?
+._*
 Thumbs.db
+ehthumbs.db
 Desktop.ini
 
-# ملفات المحررات
+# ===== محررات الكود =====
 .vscode/
 .idea/
 *.swp
 *.swo
+*.code-workspace
 
-# ملفات مضغوطة وملفات كبيرة
-*.zip
-*.rar
-*.psd
-*.ai
+# ===== Node.js & Firebase =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
 
-# ملفات مؤقتة
+# ===== Firebase - أهم شي! =====
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+.firebaserc
+firestore-debug.log
+ui-debug.log
+
+# ===== ملفات البيئة والأسرار - خطر لو انرفعت =====
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# مفاتيح Firebase + API Keys
+serviceAccountKey.json
+google-services.json
+GoogleService-Info.plist
+*.pem
+*.key
+*.cert
+
+# ===== Build & Dist =====
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# ===== ملفات مؤقتة =====
 *.log
 *.tmp
 *.temp
+.cache/
 *.cache
+coverage/
 
-# مجلدات Node لو استخدمتها مستقبلاً
-node_modules/
-dist/
-build/
+# ===== ملفات التصميم الكبيرة =====
+*.psd
+*.ai
+*.xd
+*.sketch
 
-# ملفات البيئة والباسوردات - مهم جداً!
-.env
-.env.local
-*.pem
-*.key
+# ===== ملفات مضغوطة =====
+*.zip
+*.rar
+*.7z
+*.tar.gz
 
-# ملفات Netlify
+# ===== Netlify =====
 .netlify/
+
+# ===== ملفات خاصة فيك =====
+notes.txt
+todo.md
+test.html
+draft/
