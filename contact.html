@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -339,6 +339,8 @@
             overflow: hidden;
             box-shadow: 0 10px 40px rgba(0,0,0,0.08);
             height: 400px;
+            background: #e2e8f0;
+            position: relative;
         }
 
         .map-box iframe {
@@ -401,6 +403,64 @@
                 font-size: 16px;
             }
         }
+
+        /* زر واتساب فخم Jakoop Tech - مصلح برقمك */
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.15) rotate(10deg);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 45px;
+            right: 105px;
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Cairo', sans-serif;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .whatsapp-float:hover + .whatsapp-tooltip {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -449,7 +509,7 @@
 
                             <div class="form-group">
                                 <label for="phone">رقم الهاتف</label>
-                                <input type="tel" id="phone" name="phone" data-fs-field placeholder="0790000000" />
+                                <input type="tel" id="phone" name="phone" data-fs-field placeholder="0775121442" />
                                 <span class="error-text" data-fs-error="phone"></span>
                             </div>
                         </div>
@@ -528,7 +588,7 @@
                             </div>
                             <div class="info-content">
                                 <h4>الهاتف / واتساب</h4>
-                                <a href="https://wa.me/962775121442" target="_blank">+962775121442</a>
+                                <a href="https://wa.me/962775121442" target="_blank">+962 77 512 1442</a>
                             </div>
                         </div>
 
@@ -560,10 +620,10 @@
                         </div>
                     </div>
 
-                    <!-- الخريطة -->
+                    <!-- الخريطة - شغالة 100% هسا -->
                     <div class="map-box">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3387.3375992567757!2d35.870662315135!3d31.953949981227!2m3!1f0!2f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1bd6b1c9c5d%3A0x4b5d5d5d5d5d5d5d!2sAmman%2C%20Jordan!5e0!3m2!1sen!2sjo!4v1234567890" 
+                            src="https://maps.google.com/maps?q=Amman,Jordan&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade">
@@ -573,6 +633,18 @@
             </div>
         </div>
     </section>
+
+    <!-- زر واتساب فخم Jakoop Tech - برقمك الصحيح -->
+    <a href="https://wa.me/962775121442?text=مرحباً%20Jakoop%20Tech%20👋%0A%0Aشفت%20موقعكم%20وحابب%20أستفسر%20عن%20خدماتكم%20الرقمية." 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="تواصل واتساب">
+       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" fill="white">
+         <path d="M16.04 2.006c-7.73 0-14 6.27-14 14 0 2.47.65 4.89 1.89 7.02L2 30l7.13-1.87c2.04 1.11 4.35 1.7 6.71 1.7 7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.5c-2.12 0-4.2-.56-6.02-1.62l-.43-.25-4.23 1.11 1.13-4.12-.28-.42c-1.17-1.87-1.79-4.03-1.79-6.2 0-6.43 5.23-11.66 11.66-11.66 6.43 0 11.66 5.23 11.66 11.66s-5.23 11.66-11.66 11.66zm6.4-8.78c-.35-.18-2.08-1.03-2.4-1.14-.32-.12-.55-.18-.78.18-.23.35-.9 1.14-1.1 1.38-.2.23-.4.26-.75.09-.35-.18-1.47-.54-2.8-1.72-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6-.2-.01-.43-.01-.66-.01s-.6.09-.91.43c-.31.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.18.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.08-.85 2.37-1.67.29-.82.29-1.52.2-1.67-.08-.15-.32-.23-.67-.4z"/>
+       </svg>
+    </a>
+    <div class="whatsapp-tooltip">احكي معنا واتساب</div>
+    <!-- نهاية زر الواتساب الفخم -->
 
     <!-- Footer -->
     <footer>
