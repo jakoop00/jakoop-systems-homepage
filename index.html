@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة الشركات | Jakoop Tech</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- الهيدر -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-1.75-.241 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762L3 8.882v1.183a3 3 0 001.5 2.598l1.5.866V15a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-black">Jakoop Tech</h1>
+                        <p class="text-xs text-purple-200">حلول إدارية متكاملة</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex gap-6">
+                    <a href="#systems" class="hover:text-purple-200 transition">الأنظمة</a>
+                    <a href="#features" class="hover:text-purple-200 transition">المميزات</a>
+                    <a href="#contact" class="hover:text-purple-200 transition">تواصل معنا</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- الهيرو سكشن -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-5xl font-black mb-6 leading-tight">
+                        نظام إدارة شركتك<br>
+                        <span class="text-yellow-300">في مكان واحد</span>
+                    </h2>
+                    <p class="text-xl mb-8 text-purple-100 leading-relaxed">
+                        حلول متكاملة لإدارة الموظفين والمستودعات والطلبات والدفعات. 
+                        كل شي تحت سيطرتك من لوحة تحكم واحدة سهلة وسريعة.
+                    </p>
+                    <div class="flex gap-4">
+                        <button onclick="document.getElementById('systems').scrollIntoView({behavior: 'smooth'})" 
+                            class="bg-white text-purple-600 px-8 py-4 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
+                            ابدأ الآن 🚀
+                        </button>
+                        <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-white hover:bg-opacity-20 transition">
+                            شاهد العرض
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="glass rounded-3xl p-8 shadow-2xl">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                                <div class="text-4xl mb-2">👥</div>
+                                <div class="font-bold text-2xl">150+</div>
+                                <div class="text-sm text-purple-200">موظف نشط</div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                                <div class="text-4xl mb-2">📦</div>
+                                <div class="font-bold text-2xl">2.5K</div>
+                                <div class="text-sm text-purple-200">صنف مخزون</div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                                <div class="text-4xl mb-2">📋</div>
+                                <div class="font-bold text-2xl">480</div>
+                                <div class="text-sm text-purple-200">طلب شهري</div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center">
+                                <div class="text-4xl mb-2">💰</div>
+                                <div class="font-bold text-2xl">95K</div>
+                                <div class="text-sm text-purple-200">د.أ مدفوعات</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الأنظمة -->
+    <section id="systems" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black text-gray-900 mb-4">أنظمتنا المتكاملة</h3>
+                <p class="text-xl text-gray-600">كل اللي تحتاجه لإدارة شركتك بكفاءة عالية</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- نظام دوام الموظفين -->
+                <div class="card-hover bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl p-8 text-white shadow-xl">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">نظام دوام الموظفين</h4>
+                    <p class="text-blue-100 mb-6 leading-relaxed">
+                        تتبع الحضور والانصراف، احتساب الرواتب والعمولات، وإدارة الإجازات تلقائياً
+                    </p>
+                    <ul class="space-y-2 mb-6 text-sm text-blue-100">
+                        <li class="flex items-center gap-2">✓ تسجيل دخول وخروج</li>
+                        <li class="flex items-center gap-2">✓ كشف رواتب تلقائي</li>
+                        <li class="flex items-center gap-2">✓ تقارير مفصلة</li>
+                    </ul>
+                    <a href="employee.html" class="block bg-white text-blue-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        دخول النظام →
+                    </a>
+                </div>
+
+                <!-- نظام المستودعات -->
+                <div class="card-hover bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl p-8 text-white shadow-xl">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                            <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">نظام المستودعات</h4>
+                    <p class="text-purple-100 mb-6 leading-relaxed">
+                        إدارة المخزون، تتبع الكميات، تنبيهات النقص، وجرد دوري بكل سهولة
+                    </p>
+                    <ul class="space-y-2 mb-6 text-sm text-purple-100">
+                        <li class="flex items-center gap-2">✓ إدارة الأصناف</li>
+                        <li class="flex items-center gap-2">✓ تنبيه المخزون</li>
+                        <li class="flex items-center gap-2">✓ باركود QR</li>
+                    </ul>
+                    <a href="warehouse.html" class="block bg-white text-purple-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        دخول النظام →
+                    </a>
+                </div>
+
+                <!-- نظام طلب البضاعة -->
+                <div class="card-hover bg-gradient-to-br from-green-500 to-green-700 rounded-2xl p-8 text-white shadow-xl">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">نظام طلب البضاعة</h4>
+                    <p class="text-green-100 mb-6 leading-relaxed">
+                        طلب بضاعة من الموردين، تتبع حالة الطلبات، وإدارة المشتريات بكفاءة
+                    </p>
+                    <ul class="space-y-2 mb-6 text-sm text-green-100">
+                        <li class="flex items-center gap-2">✓ طلبات سريعة</li>
+                        <li class="flex items-center gap-2">✓ تتبع الشحنات</li>
+                        <li class="flex items-center gap-2">✓ فواتير تلقائية</li>
+                    </ul>
+                    <a href="orders.html" class="block bg-white text-green-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        دخول النظام →
+                    </a>
+                </div>
+
+                <!-- نظام دفعات الذمم -->
+                <div class="card-hover bg-gradient-to-br from-orange-500 to-orange-700 rounded-2xl p-8 text-white shadow-xl">
+                    <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">نظام دفعات الذمم</h4>
+                    <p class="text-orange-100 mb-6 leading-relaxed">
+                        إدارة ذمم التجار، جدولة الدفعات، تنبيهات الاستحقاق، وكشوفات حساب
+                    </p>
+                    <ul class="space-y-2 mb-6 text-sm text-orange-100">
+                        <li class="flex items-center gap-2">✓ كشف حساب تاجر</li>
+                        <li class="flex items-center gap-2">✓ جدولة دفعات</li>
+                        <li class="flex items-center gap-2">✓ تنبيهات واتساب</li>
+                    </ul>
+                    <a href="payments.html" class="block bg-white text-orange-600 text-center py-3 rounded-xl font-bold hover:bg-gray-100 transition">
+                        دخول النظام →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- المميزات -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-black text-gray-900 mb-4">ليش تختار نظامنا؟</h3>
+                <p class="text-xl text-gray-600">مميزات تخلي شغلك أسهل وأسرع</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">سريع وخفيف</h4>
+                    <p class="text-gray-600">مبني على Firebase، سرعة صاروخية وأداء عالي حتى مع آلاف السجلات</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">آمن ومحمي</h4>
+                    <p class="text-gray-600">تشفير كامل للبيانات، نسخ احتياطي تلقائي، وصلاحيات متعددة المستويات</p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">سهل الاستخدام</h4>
+                    <p class="text-gray-600">واجهة عربية 100%، تصميم بسيط وواضح، ما بتحتاج تدريب</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer id="contact" class="gradient-bg text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h5 class="text-2xl font-black mb-4">Jakoop Tech</h5>
+                    <p class="text-purple-200">حلول برمجية متكاملة لإدارة الشركات والمؤسسات</p>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4">روابط سريعة</h6>
+                    <ul class="space-y-2 text-purple-200">
+                        <li><a href="employee.html" class="hover:text-white">نظام الدوام</a></li>
+                        <li><a href="warehouse.html" class="hover:text-white">المستودعات</a></li>
+                        <li><a href="orders.html" class="hover:text-white">طلب البضاعة</a></li>
+                        <li><a href="payments.html" class="hover:text-white">دفعات الذمم</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-bold mb-4">تواصل معنا</h6>
+                    <ul class="space-y-2 text-purple-200">
+                        <li>📱 واتساب: +962 7X XXX XXXX</li>
+                        <li>📧 info@jakoop.tech</li>
+                        <li>📍 عمان - الأردن</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white border-opacity-20 pt-8 text-center text-purple-200">
+                <p>© 2026 Jakoop Tech. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
