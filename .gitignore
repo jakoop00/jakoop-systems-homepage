@@ -1,0 +1,39 @@
+# .gitignore - Jakoop Tech
+# أي ملف/مجلد مكتوب هون ما بنرفع على GitHub
+
+# ملفات النظام
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ملفات المحررات
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ملفات مضغوطة وملفات كبيرة
+*.zip
+*.rar
+*.psd
+*.ai
+
+# ملفات مؤقتة
+*.log
+*.tmp
+*.temp
+*.cache
+
+# مجلدات Node لو استخدمتها مستقبلاً
+node_modules/
+dist/
+build/
+
+# ملفات البيئة والباسوردات - مهم جداً!
+.env
+.env.local
+*.pem
+*.key
+
+# ملفات Netlify
+.netlify/
