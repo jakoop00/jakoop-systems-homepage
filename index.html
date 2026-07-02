@@ -6,10 +6,62 @@
     <title>Jakoop Tech | نظام إدارة الشركات</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Cairo', sans-serif; }
         .loader { border: 3px solid #f3f3f3; border-top: 3px solid #4f46e5; border-radius: 50%; width: 20px; height: 20px; animation: spin 1s linear infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float:hover {
+            background: #128C7E;
+            transform: scale(1.15) rotate(10deg);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .whatsapp-tooltip {
+            position: fixed;
+            bottom: 45px;
+            right: 105px;
+            background: #333;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: 'Cairo', sans-serif;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        .whatsapp-float:hover + .whatsapp-tooltip {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -17,7 +69,7 @@
     <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center gap-3">
+                <a href="index.html" class="flex items-center gap-3">
                     <div class="bg-white/20 p-2 rounded-xl">
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                             <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"></path>
@@ -27,16 +79,17 @@
                         <h1 class="text-2xl font-bold">Jakoop Tech</h1>
                         <p class="text-xs text-indigo-100">حلول إدارية متكاملة</p>
                     </div>
-                </div>
+                </a>
                 <nav class="hidden md:flex gap-8">
-                    <a href="#systems" class="hover:text-indigo-200 transition">الأنظمة</a>
-                    <a href="#features" class="hover:text-indigo-200 transition">المميزات</a>
-                    <a href="#contact" class="hover:text-indigo-200 transition">تواصل معنا</a>
+                    <a href="index.html" class="hover:text-indigo-200 transition font-bold">الرئيسية</a>
+                    <a href="services.html" class="hover:text-indigo-200 transition">خدماتنا</a>
+                    <a href="about.html" class="hover:text-indigo-200 transition">من نحن</a>
+                    <a href="contact.html" class="hover:text-indigo-200 transition">تواصل معنا</a>
                 </nav>
             </div>
         </div>
     </header>
-<!-- نهاية قسم الخدمات -->
+
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-20 px-4">
         <div class="container mx-auto">
@@ -49,16 +102,24 @@
                     <p class="text-xl mb-8 text-indigo-100">
                         حلول متكاملة لإدارة الموظفين والمستودعات والطلبات والدفعات. كل شي تحت سيطرتك من لوحة تحكم واحدة سهلة وسريعة.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#contact" class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all">
-                            🚀 ابدأ الآن
+                    
+                    <!-- الأزرار الجديدة الفخمة -->
+                    <div class="flex flex-wrap gap-4">
+                        <a href="services.html" class="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all flex items-center gap-2">
+                            <i class="fas fa-th-large"></i>
+                            خدماتنا
                         </a>
-                        <button class="bg-white/20 backdrop-blur px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all">
-                            شاهد العرض
-                        </button>
+                        <a href="about.html" class="bg-white/20 backdrop-blur px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all flex items-center gap-2">
+                            <i class="fas fa-users"></i>
+                            من نحن
+                        </a>
+                        <a href="contact.html" class="bg-yellow-400 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-yellow-300 transition-all flex items-center gap-2">
+                            <i class="fas fa-rocket"></i>
+                            تواصل معنا
+                        </a>
                     </div>
                 </div>
-                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
+                <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border-white/20">
                     <div class="grid grid-cols-2 gap-4">
                         <div class="bg-white/20 rounded-2xl p-6 text-center">
                             <div class="text-4xl mb-2">👥</div>
@@ -124,7 +185,7 @@
 
                 <div class="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-6 text-white hover:scale-105 transition-transform cursor-pointer shadow-lg">
                     <div class="bg-white/20 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 0 01-.567.267z"></path><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"></path></svg>
                     </div>
                     <h3 class="text-xl font-bold mb-2">الذمم والمدفوعات</h3>
                     <p class="text-orange-100 text-sm mb-4">تحصيل الذمم، الشيكات، وكشوف الحساب</p>
@@ -143,27 +204,29 @@
 
             <div class="text-center mt-12">
                 <p class="text-gray-600 mb-4">احصل على الـ 5 أنظمة مع بعض بسعر خاص</p>
-                <a href="#contact" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all">
+                <a href="contact.html" class="inline-block bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all">
                     اطلب البكج الكامل - 600 دينار/سنوي 🚀
                 </a>
             </div>
         </div>
     </section>
-<!-- قسم الخدمات - زر العروض -->
-<section style="padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-    <div style="max-width: 800px; margin: 0 auto;">
-        <h2 style="font-size: 2.2rem; color: #1E3A8A; margin-bottom: 15px; font-family: 'Cairo', sans-serif;">حلول رقمية تبدأ من 150 دينار</h2>
-        <p style="font-size: 1.2rem; color: #555; margin-bottom: 35px; font-family: 'Cairo', sans-serif;">
-            مواقع، متاجر إلكترونية، وأنظمة مخصصة لشركتك. شوف الباقات اللي بتناسبك
-        </p>
-        <a href="services.html" 
-           style="display: inline-block; background: #1E3A8A; color: white; padding: 18px 45px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.2rem; font-family: 'Cairo', sans-serif; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);"
-           onmouseover="this.style.background='#3B82F6'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(30, 58, 138, 0.4)';"
-           onmouseout="this.style.background='#1E3A8A'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(30, 58, 138, 0.3)';">
-            🔥 شوف العروض والأسعار
-        </a>
-    </div>
-</section>
+
+    <!-- قسم الخدمات - زر العروض -->
+    <section style="padding: 80px 20px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-size: 2.2rem; color: #1E3A8A; margin-bottom: 15px; font-family: 'Cairo', sans-serif;">حلول رقمية تبدأ من 150 دينار</h2>
+            <p style="font-size: 1.2rem; color: #555; margin-bottom: 35px; font-family: 'Cairo', sans-serif;">
+                مواقع، متاجر إلكترونية، وأنظمة مخصصة لشركتك. شوف الباقات اللي بتناسبك
+            </p>
+            <a href="services.html" 
+               style="display: inline-block; background: #1E3A8A; color: white; padding: 18px 45px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 1.2rem; font-family: 'Cairo', sans-serif; transition: all 0.3s; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);"
+               onmouseover="this.style.background='#3B82F6'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(30, 58, 138, 0.4)';"
+               onmouseout="this.style.background='#1E3A8A'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(30, 58, 138, 0.3)';">
+                🔥 شوف العروض والأسعار
+            </a>
+        </div>
+    </section>
+
     <!-- ليش تختار نظامنا؟ -->
     <section id="features" class="py-20 px-4">
         <div class="container mx-auto">
@@ -261,18 +324,18 @@
                 <div>
                     <h4 class="font-bold mb-4">روابط سريعة</h4>
                     <ul class="space-y-2 text-indigo-100">
-                        <li><a href="#systems" class="hover:text-white">نظام الدوام</a></li>
-                        <li><a href="#systems" class="hover:text-white">المستودعات</a></li>
-                        <li><a href="#systems" class="hover:text-white">طلب البضاعة</a></li>
-                        <li><a href="#systems" class="hover:text-white">دفعات الذمم</a></li>
+                        <li><a href="services.html" class="hover:text-white">خدماتنا</a></li>
+                        <li><a href="portfolio.html" class="hover:text-white">أعمالنا</a></li>
+                        <li><a href="about.html" class="hover:text-white">من نحن</a></li>
+                        <li><a href="contact.html" class="hover:text-white">تواصل معنا</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">تواصل معنا</h4>
                     <ul class="space-y-2 text-indigo-100">
-                        <li>📱  واتساب: +962775121442</li>
-                        <li>📧 info@jakoop.tech</li>
-                        <li>📍 عمان - الأردن</li>
+                        <li><i class="fab fa-whatsapp"></i> واتساب: +962775121442</li>
+                        <li><i class="fas fa-envelope"></i> info@jakoop.tech</li>
+                        <li><i class="fas fa-map-marker-alt"></i> عمان - الأردن</li>
                     </ul>
                 </div>
             </div>
@@ -337,75 +400,17 @@
                 loader.classList.add('hidden');
             }
         });
-    </script><!-- زر واتساب فخم Jakoop Tech -->
-<style>
-  .whatsapp-float {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 30px;
-    right: 30px;
-    background: #25D366;
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: pulse 2s infinite;
-    transition: all 0.3s;
-  }
-  
-  .whatsapp-float:hover {
-    background: #128C7E;
-    transform: scale(1.15) rotate(10deg);
-    animation: none;
-  }
-  
-  @keyframes pulse {
-    0% {
-      box-shadow: 0 0 rgba(37, 211, 102, 0.7);
-    }
-    70% {
-      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-    }
-  }
-  
-  .whatsapp-tooltip {
-    position: fixed;
-    bottom: 45px;
-    right: 105px;
-    background: #333;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-family: 'Cairo', sans-serif;
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-    z-index: 9999;
-  }
-  
-  .whatsapp-float:hover + .whatsapp-tooltip {
-    opacity: 1;
-  }
-</style>
+    </script>
+    <!-- زر واتساب فخم Jakoop Tech -->
+    <a href="https://wa.me/962775121442?text=مرحباً%20Jakoop%20Tech%20👋%0A%0Aشفت%20موقعكم%20وحابب%20أستفسر%20عن%20خدماتكم%20الرقمية." 
+       class="whatsapp-float" 
+       target="_blank"
+       aria-label="تواصل واتساب">
+       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" fill="white">
+         <path d="M16.04 2.006c-7.73 0-14 6.27-14 14 0 2.47.65 4.89 1.89 7.02L2 30l7.13-1.87c2.04 1.11 4.35 1.7 6.71 1.7 7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.5c-2.12 0-4.2-.56-6.02-1.62l-.43-.25-4.23 1.11 1.13-4.12-.28-.42c-1.17-1.87-1.79-4.03-1.79-6.2 0-6.43 5.23-11.66 11.66-11.66 6.43 0 11.66 5.23 11.66 11.66s-5.23 11.66-11.66 11.66zm6.4-8.78c-.35-.18-2.08-1.03-2.4-1.14-.32-.12-.55-.18-.78.18-.23.35-.9 1.14-1.1 1.38-.2.23-.4.26-.75.09-.35-.18-1.47-.54-2.8-1.72-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6-.2-.01-.43-.01-.66-.01s-.6.09-.91.43c-.31.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.18.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.08-.85 2.37-1.67.29-.82.29-1.52.2-1.67-.08-.15-.32-.23-.67-.4z"/>
+       </svg>
+    </a>
+    <div class="whatsapp-tooltip">احكي معنا واتساب</div>
 
-<a href="https://wa.me/962775121442?text=مرحباً%20Jakoop%20Tech%20👋%0A%0Aشفت%20موقعكم%20وحابب%20أستفسر%20عن%20خدماتكم%20الرقمية." 
-   class="whatsapp-float" 
-   target="_blank"
-   aria-label="تواصل واتساب">
-   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 32 32" fill="white">
-     <path d="M16.04 2.006c-7.73 0-14 6.27-14 14 0 2.47.65 4.89 1.89 7.02L2 30l7.13-1.87c2.04 1.11 4.35 1.7 6.71 1.7 7.73 0 14-6.27 14-14s-6.27-14-14-14zm0 25.5c-2.12 0-4.2-.56-6.02-1.62l-.43-.25-4.23 1.11 1.13-4.12-.28-.42c-1.17-1.87-1.79-4.03-1.79-6.2 0-6.43 5.23-11.66 11.66-11.66 6.43 0 11.66 5.23 11.66 11.66s-5.23 11.66-11.66 11.66zm6.4-8.78c-.35-.18-2.08-1.03-2.4-1.14-.32-.12-.55-.18-.78.18-.23.35-.9 1.14-1.1 1.38-.2.23-.4.26-.75.09-.35-.18-1.47-.54-2.8-1.72-1.03-.92-1.73-2.06-1.93-2.41-.2-.35-.02-.54.15-.71.15-.15.35-.4.52-.6.18-.2.23-.35.35-.58.12-.23.06-.43-.03-.6-.09-.18-.78-1.88-1.07-2.57-.28-.68-.57-.59-.78-.6-.2-.01-.43-.01-.66-.01s-.6.09-.91.43c-.31.35-1.2 1.17-1.2 2.85s1.23 3.31 1.4 3.54c.18.23 2.42 3.7 5.87 5.19.82.35 1.46.56 1.96.72.82.26 1.57.22 2.16.13.66-.1 2.08-.85 2.37-1.67.29-.82.29-1.52.2-1.67-.08-.15-.32-.23-.67-.4z"/>
-   </svg>
-</a>
-<div class="whatsapp-tooltip">احكي معنا واتساب</div>
-<!-- نهاية زر الواتساب الفخم -->
 </body>
 </html>
