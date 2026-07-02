@@ -1,0 +1,30 @@
+# netlify.toml - إعدادات Jakoop Tech
+# حطه في نفس فولدر index.html
+
+[build]
+  publish = "." # مجلد النشر هو الرئيسي
+  command = "" # ما في أمر build لأنه HTML عادي
+
+# إجبار HTTPS + Headers للأمان والسرعة
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # كاش قوي للملفات الثابتة - بخلي الموقع صاروخ
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# صفحة 404 مخصصة - اختياري
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# إعادة توجيه www للـ non-www أو العكس
+[[redirects]]
+  from = "https://www.systems.jakoop.tech/*"
+  to = "https://systems.jakoop.tech/:splat"
+  status = 301
+  force = true
