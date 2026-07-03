@@ -15,46 +15,64 @@
 <body class="bg-white">
     <!-- Header -->
     <!-- Header -->
-    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                
-                <!-- اسم الشركة -->
-                <a href="index.html" class="flex items-center gap-3">
-                    <div class="bg-white/20 p-2 rounded-xl">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h1 class="text-2xl font-bold">Jakoop Tech</h1>
-                        <p class="text-xs text-indigo-100">حلول إدارية متكاملة</p>
-                    </div>
-                </a>
-
-                <!-- الأزرار الجديدة بالنص - صفحات خارجية -->
-                <div class="hidden md:flex gap-4 items-center">
-                    <a href="services.html" class="bg-white/20 backdrop-blur px-5 py-2 rounded-lg font-bold hover:bg-white/30 transition-all">
-                        خدماتنا
-                    </a>
-                    <a href="about.html" class="bg-white/20 backdrop-blur px-5 py-2 rounded-lg font-bold hover:bg-white/30 transition-all">
-                        من نحن
-                    </a>
-                    <a href="contact.html" class="bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-all">
-                        تواصل معنا
-                    </a>
+    <!-- Header -->
+<header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            
+            <!-- اسم الشركة -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="bg-white/20 p-2 rounded-xl">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"></path>
+                    </svg>
                 </div>
+                <div>
+                    <h1 class="text-2xl font-bold">Jakoop Tech</h1>
+                    <p class="text-xs text-indigo-100">حلول إدارية متكاملة</p>
+                </div>
+            </a>
 
-                <!-- الروابط الداخلية القديمة -->
-                <nav class="hidden md:flex gap-6">
-                    <a href="#systems" class="hover:text-indigo-200 transition">الأنظمة</a>
-                    <a href="#features" class="hover:text-indigo-200 transition">المميزات</a>
-                    <a href="#contact" class="hover:text-indigo-200 transition">تواصل</a>
-                </nav>
-
+            <!-- الأزرار الجديدة بالنص - صفحات خارجية -->
+            <div class="hidden md:flex gap-4 items-center">
+                <a href="services.html" class="bg-white/20 backdrop-blur px-5 py-2 rounded-lg font-bold hover:bg-white/30 transition-all">
+                    خدماتنا
+                </a>
+                <a href="about.html" class="bg-white/20 backdrop-blur px-5 py-2 rounded-lg font-bold hover:bg-white/30 transition-all">
+                    من نحن
+                </a>
+                <a href="contact.html" class="bg-[#25D366] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#128C7E] transition-all">
+                    تواصل معنا
+                </a>
             </div>
+
+            <!-- الروابط الداخلية القديمة -->
+            <nav class="hidden md:flex gap-6">
+                <a href="#systems" class="hover:text-indigo-200 transition">الأنظمة</a>
+                <a href="#features" class="hover:text-indigo-200 transition">المميزات</a>
+                <a href="#contact" class="hover:text-indigo-200 transition">تواصل</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </header>
+    </div>
+    
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4 px-4">
+        <div class="flex flex-col gap-3">
+            <a href="services.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg font-bold">خدماتنا</a>
+            <a href="about.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg font-bold">من نحن</a>
+            <a href="contact.html" class="bg-[#25D366] text-white px-4 py-2 rounded-lg font-bold">تواصل معنا</a>
+            <hr class="border-white/20 my-2">
+            <a href="#systems" class="px-4 py-1">الأنظمة</a>
+            <a href="#features" class="px-4 py-1">المميزات</a>
+            <a href="#contact" class="px-4 py-1">تواصل</a>
+        </div>
+    </div>
+</header>
 <!-- نهاية قسم الخدمات -->
     <!-- Hero Section -->
     <section class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-20 px-4">
@@ -426,5 +444,16 @@
 </a>
 <div class="whatsapp-tooltip">احكي معنا واتساب</div>
 <!-- نهاية زر الواتساب الفخم -->
+
+<script>
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(mobileBtn) {
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
+</script>
 </body>
 </html>
