@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakoop Tech | نظام إدارة الشركات</title>
+    <!-- SEO + Performance -->
+    <meta name="description" content="Jakoop Tech - نظام إدارة شركات متكامل: دوام، مستودعات، طلبات، ذمم، CRM. سعر 600 دينار سنوي">
+    <meta name="keywords" content="نظام إدارة, برنامج محاسبة الأردن, CRM, مستودعات, Jakoop Tech">
+    <meta name="author" content="Jakoop Tech">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -40,7 +48,7 @@
                     <a href="about.html" class="bg-white/20 backdrop-blur px-5 py-2 rounded-lg font-bold hover:bg-white/30 transition-all">
                         من نحن
                     </a>
-                    <a href="contact.html" class="bg-yellow-400 text-gray-900 px-5 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-all">
+                    <a href="contact.html" class="bg-[#25D366] text-white px-5 py-2 rounded-lg font-bold hover:bg-[#128C7E] transition-all">
                         تواصل معنا
                     </a>
                 </div>
@@ -52,6 +60,25 @@
                     <a href="#contact" class="hover:text-indigo-200 transition">تواصل</a>
                 </nav>
 
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <div class="flex flex-col gap-3">
+                <a href="services.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg font-bold">خدماتنا</a>
+                <a href="about.html" class="bg-white/20 backdrop-blur px-4 py-2 rounded-lg font-bold">من نحن</a>
+                <a href="contact.html" class="bg-[#25D366] text-white px-4 py-2 rounded-lg font-bold">تواصل معنا</a>
+                <hr class="border-white/20 my-2">
+                <a href="#systems" class="px-4 py-1">الأنظمة</a>
+                <a href="#features" class="px-4 py-1">المميزات</a>
+                <a href="#contact" class="px-4 py-1">تواصل</a>
+            </div>
+        </div>
             </div>
         </div>
     </header>
@@ -269,34 +296,48 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12 px-4">
-        <div class="container mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-2xl font-bold mb-4">Jakoop Tech</h3>
-                    <p class="text-indigo-100">حلول برمجية متكاملة لإدارة الشركات والمؤسسات</p>
+                    <h3 class="text-xl font-bold mb-4">Jakoop Tech</h3>
+                    <p class="text-gray-400">حلول إدارية متكاملة لإدارة شركتك بكفاءة</p>
+                    <div class="flex gap-4 mt-4">
+                        <a href="https://facebook.com/jakooptech" target="_blank" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/jakooptech" target="_blank" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/962775121442" target="_blank" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://linkedin.com/company/jakooptech" target="_blank" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">روابط سريعة</h4>
-                    <ul class="space-y-2 text-indigo-100">
+                    <h4 class="font-bold mb-4">الأنظمة</h4>
+                    <ul class="space-y-2 text-gray-400">
                         <li><a href="#systems" class="hover:text-white">نظام الدوام</a></li>
-                        <li><a href="#systems" class="hover:text-white">المستودعات</a></li>
-                        <li><a href="#systems" class="hover:text-white">طلب البضاعة</a></li>
-                        <li><a href="#systems" class="hover:text-white">دفعات الذمم</a></li>
+                        <li><a href="#systems" class="hover:text-white">إدارة المستودعات</a></li>
+                        <li><a href="#systems" class="hover:text-white">طلبات البضاعة</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">الصفحات</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="services.html" class="hover:text-white">خدماتنا</a></li>
+                        <li><a href="about.html" class="hover:text-white">من نحن</a></li>
+                        <li><a href="contact.html" class="hover:text-white">تواصل معنا</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">تواصل معنا</h4>
-                    <ul class="space-y-2 text-indigo-100">
-                        <li>📱  واتساب: +962775121442</li>
-                        <li>📧 info@jakoop.tech</li>
-                        <li>📍 عمان - الأردن</li>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone ml-2"></i>0775121442</li>
+                        <li><i class="fas fa-envelope ml-2"></i>info@jakoop.tech</li>
+                        <li><i class="fas fa-map-marker-alt ml-2"></i>عمان، الأردن</li>
+                      
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/20 pt-8 text-center text-indigo-100">
-                <p>© 2026 Jakoop Tech. جميع الحقوق محفوظة</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Jakoop Tech. جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>
